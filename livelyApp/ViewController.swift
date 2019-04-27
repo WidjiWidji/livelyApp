@@ -12,13 +12,13 @@ class ViewController: UIViewController {
     //testing github
     //pull request test
 
-    var gender:Int
-    var age:Int
-    var heightFt:Int
-    var heightIn:Int
-    var weight:Int
-    var bmiLabel:Int
-    var workoutVolumeLabel:Int
+    var gender:Int = 0
+    var age:Int = 0
+    var heightFt:Int = 0
+    var heightIn:Int = 0
+    var weight:Int = 0
+    var bmiLabel:Int = 0
+    var workoutVolumeLabel:Int = 0
     
     
     override func viewDidLoad() {
