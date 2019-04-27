@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var gender:Int
+    var age:Int
+    var heightFt:Int
+    var heightIn:Int
+    var weight:Int
+    var bmiLabel:Int
+    var workoutVolumeLabel:Int
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
