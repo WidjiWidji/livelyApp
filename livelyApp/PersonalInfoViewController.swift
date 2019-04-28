@@ -8,6 +8,21 @@
 
 import UIKit
 
+extension UIViewController{
+    
+    func HideKeyboard(){
+        let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DismissKeyboard))
+        
+        view.addGestureRecognizer(Tap)
+    }
+    
+    
+    @objc func DismissKeyboard(){
+        view.endEditing(true)
+    }
+    
+}
+
 class PersonalInfoViewController: UIViewController {
     
     
@@ -20,13 +35,30 @@ class PersonalInfoViewController: UIViewController {
     @IBOutlet weak var workoutLabel: UILabel!
     @IBOutlet weak var workoutSlider: UISlider!
     
+    
     @IBAction func workoutVolSlider(_ sender: AnyObject) {
         workoutLabel.text = String(sender.value)
     }
+    @IBAction func saveButton(_ sender: UIButton) {
+        UserDefaults.standard.set(genderControl.selectedSegmentIndex, forKey: "userGender")
+        UserDefaults.standard.set(ageField.text, forKey: "userAge")
+        UserDefaults.standard.set(heightFtField.text, forKey: "userHeightFt")
+        UserDefaults.standard.set(heightInField.text, forKey: "userHeightIn")
+        UserDefaults.standard.set(weightField.text, forKey: "userWeight")
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.HideKeyboard()
+        
 
         // Do any additional setup after loading the view.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        if let gender = UserDefaults.standard.object(forKey: "userGender") as? Int
+        {
+            genderControl.selectedSegmentIndex = gender
+        }
     }
     
 
