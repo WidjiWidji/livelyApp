@@ -82,6 +82,13 @@ class PersonalInfoViewController: UIViewController {
         }
     }
     
+    let age = "userAge"
+    let heightFeet = "userHeightFt"
+    let heightInches = "userHeightIn"
+    let weight = "userWeight"
+    let bmi = "userBmi"
+    let workoutVolume = "userWorkoutVol"
+    
     //saving all personal info as userDefaults
     @IBAction func saveButton(_ sender: UIButton) {
         
@@ -97,8 +104,36 @@ class PersonalInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.HideKeyboard()
+        self.HideKeyboard()
         
+        if let gender = UserDefaults.standard.object(forKey: "userGender") as? Int
+        {
+            genderControl.selectedSegmentIndex = gender
+        }
+        if let age = UserDefaults.standard.value(forKey: "userAge") as? Int
+        {
+            ageField.text = String(age)
+        }
+        if let heightFeet = UserDefaults.standard.value(forKey: "userHeightFt") as? Int
+        {
+            heightFtField.text = String(heightFeet)
+        }
+        if let heightInches = UserDefaults.standard.value(forKey: "userHeightIn") as? Int
+        {
+            heightInField.text = String(heightInches)
+        }
+        if let weight = UserDefaults.standard.value(forKey: "userWeight") as? Int
+        {
+            weightField.text = String(weight)
+        }
+        if let bmi = UserDefaults.standard.value(forKey: "userBmi") as? Int
+        {
+            bmiLabel.text = String(bmi)
+        }
+        if let workoutVolume = UserDefaults.standard.value(forKey: "userWorkoutVol") as? Int
+        {
+            workoutLabel.text = String(workoutVolume)
+        }
 
         // Do any additional setup after loading the view.
     }
@@ -107,27 +142,27 @@ class PersonalInfoViewController: UIViewController {
         {
             genderControl.selectedSegmentIndex = gender
         }
-        if let age = UserDefaults.standard.object(forKey: "userAge") as? Int
+        if let age = UserDefaults.standard.value(forKey: "userAge") as? Int
         {
             ageField.text = String(age)
         }
-        if let heightFeet = UserDefaults.standard.object(forKey: "userHeightFt") as? Int
+        if let heightFeet = UserDefaults.standard.value(forKey: "userHeightFt") as? Int
         {
             heightFtField.text = String(heightFeet)
         }
-        if let heightInches = UserDefaults.standard.object(forKey: "userHeightIn") as? Int
+        if let heightInches = UserDefaults.standard.value(forKey: "userHeightIn") as? Int
         {
             heightInField.text = String(heightInches)
         }
-        if let weight = UserDefaults.standard.object(forKey: "userWeight") as? Int
+        if let weight = UserDefaults.standard.value(forKey: "userWeight") as? Int
         {
             weightField.text = String(weight)
         }
-        if let bmi = UserDefaults.standard.object(forKey: "userBmi") as? Int
+        if let bmi = UserDefaults.standard.value(forKey: "userBmi") as? Int
         {
             bmiLabel.text = String(bmi)
         }
-        if let workoutVolume = UserDefaults.standard.object(forKey: "userWorkoutVol") as? Int
+        if let workoutVolume = UserDefaults.standard.value(forKey: "userWorkoutVol") as? Int
         {
             workoutLabel.text = String(workoutVolume)
         }
