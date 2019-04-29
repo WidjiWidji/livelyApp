@@ -39,6 +39,8 @@ class PersonalInfoViewController: UIViewController {
         workoutLabel.text = String(Int(sender.value))
     }
     
+    
+    
     //BMI = kg/m2 (weight/height^2)
     func bmiCalc() -> Double{
         let weight = weightField.text!
@@ -137,14 +139,15 @@ class PersonalInfoViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
-    */
+        
+    }*/
+ 
 
 }
