@@ -44,7 +44,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1839" y="789"/>
+            <point key="canvasLocation" x="-1839" y="1542"/>
         </scene>
         <!--Nutrition-->
         <scene sceneID="hBp-gW-krb">
@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf1-6u-xTO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1071" y="788"/>
+            <point key="canvasLocation" x="-1071" y="1542"/>
         </scene>
         <!--Hydration-->
         <scene sceneID="xdQ-Gj-Vv4">
@@ -119,7 +119,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiE-XN-Ojp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-236" y="787.55622188905556"/>
+            <point key="canvasLocation" x="-236" y="1541"/>
         </scene>
         <!--Personal Info-->
         <scene sceneID="kyR-vF-a8l">
@@ -271,11 +271,14 @@
                         <outlet property="weightField" destination="Hq7-q6-Jgd" id="bhD-Kg-Zjy"/>
                         <outlet property="workoutLabel" destination="6Ne-2y-ZJs" id="ah1-MC-qJD"/>
                         <outlet property="workoutSlider" destination="CEX-Tj-74y" id="GLJ-9J-MVQ"/>
+                        <segue destination="gsg-b7-FJe" kind="show" id="Tj8-Bn-o1C"/>
+                        <segue destination="VQN-Ah-UGf" kind="show" id="T44-pp-ueg"/>
+                        <segue destination="BYZ-38-t0r" kind="show" id="NjK-zB-lvS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fLo-Rn-NfZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="657" y="788"/>
+            <point key="canvasLocation" x="657" y="776"/>
         </scene>
         <!--Workout-->
         <scene sceneID="esZ-Jm-xiF">
@@ -354,4 +357,9 @@
             <point key="canvasLocation" x="658" y="-102"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Tj8-Bn-o1C"/>
+        <segue reference="T44-pp-ueg"/>
+        <segue reference="NjK-zB-lvS"/>
+    </inferredMetricsTieBreakers>
 </document>
